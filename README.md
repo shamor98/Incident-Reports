@@ -49,11 +49,16 @@ Incident Report Screen:
 - Save Report
 The purpose of this application is to provide a clear and functional interface.
 
-## Hutchinson, B. (2021, June 29). The problem with incident reporting. SafetyInsights.org.
-## Bartosińska, I. (2026, June 19). What is a mobile app? Types, examples, and how it works. Droids On Roids.
-## Jackson, E. (2024, November 19). Frontend vs. backend development: Choose your side, master your craft. Medium. https://medium.com/@ebojacky/frontend-vs-backend-development-choose-your-side-master-your-craft-14774e77fe0f
-## MockFlow. (2026, June 4). Importance of wireframing in product design process.
-## Holcombe, J. (2026, March 20). What is GitHub? A beginner’s introduction to GitHub. Kinsta.
+## References:
+ Hutchinson, B. (2021, June 29). The problem with incident reporting. SafetyInsights.org.
+ 
+ Bartosińska, I. (2026, June 19). What is a mobile app? Types, examples, and how it works. Droids On Roids.
+ 
+ Jackson, E. (2024, November 19). Frontend vs. backend development: Choose your side, master your craft. Medium. https://medium.com/@ebojacky/frontend-vs-backend-development-choose-your-side-master-your-craft-14774e77fe0f
+ 
+ MockFlow. (2026, June 4). Importance of wireframing in product design process.
+ 
+ Holcombe, J. (2026, March 20). What is GitHub? A beginner’s introduction to GitHub. Kinsta.
 
 
 
