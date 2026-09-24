@@ -60,6 +60,49 @@ The purpose of this application is to provide a clear and functional interface.
  
  Holcombe, J. (2026, March 20). What is GitHub? A beginner’s introduction to GitHub. Kinsta.
 
+ ## Current Project Update
+
+### Version Changelog
+
+**Previous Version**
+- Designed the basic Incident Report App structure.
+-  Individuals involved.
+-  Date and time.
+-  Location.
+-  Incident description.
+-  Reporter information.
+-  Action taken.
+
+**Current Version**
+- Android Studio project has been uploaded to GitHub.
+- Created the Main Incident Report screen.
+- Added View Reports.
+- Project files are now stored in the GitHub repository.
+- GitHub repository connection and version control are working.
+- Project is currently being tested and prepared for additional features.
+
+**Planned Future Updates**
+-  incident categories 
+-  automatic report numbers.
+-  employee name selection.
+-  search capabilities.
+-  editing of saved reports.
+-  database storage.
+-  user login.
+-  PDF/export capability.
+
+## Development Environment
+
+- Android Studio
+- Java
+- XML
+- Git
+- GitHub
+
+## Current Development Stage
+
+The development and testing stage is currently where Incident Report App is . Report functions and the basic interface  are being developed and tested before the application will move to later stages such as production and staging.
+
 
 
 
