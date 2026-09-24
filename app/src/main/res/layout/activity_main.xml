@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Incident Report"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="20dp" />
+
+        <EditText
+            android:id="@+id/editIndividuals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Individuals Involved" />
+
+        <EditText
+            android:id="@+id/editDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Date (MM/DD/YYYY)"
+            android:inputType="date" />
+
+        <EditText
+            android:id="@+id/editTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Time"
+            android:inputType="time" />
+
+        <EditText
+            android:id="@+id/editLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location" />
+
+        <EditText
+            android:id="@+id/editDescription"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:gravity="top"
+            android:hint="Description of Incident"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/editActionTaken"
+            android:layout_width="match_parent"
+            android:layout_height="553dp"
+            android:gravity="top"
+            android:hint="Action Taken"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/editReporter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Reporter Name" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Save Report" />
+
+        <Button
+            android:id="@+id/btnViewReports"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="View Reports" />
+
+    </LinearLayout>
+
+</ScrollView>
