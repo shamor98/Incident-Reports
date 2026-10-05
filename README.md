@@ -101,7 +101,52 @@ The purpose of this application is to provide a clear and functional interface.
 
 ## Current Development Stage
 
+
+
 The development and testing stage is currently where Incident Report App is . Report functions and the basic interface  are being developed and tested before the application will move to later stages such as production and staging.
+
+Test Stage Final Evaluation:
+      The Incident Report App is now promoting to the Test stage which is the ending project assessment.
+Purpose of the test stage:
+The Test stage will confirm that the App is working efficiently. Android Studio and mobile devices are how the App was tested and developed. 
+Test Acted:
+        Function:                                                                           Results:
+      User Interface shows accurate                                                                      Works
+     App Opens Correctly                                                                                           Works
+    Information on the incident can be entered                                              Works
+   Date and Time Operate properly                                                                      Works
+   App Operates on a Mobile Device                                                                    Works
+Rep0rts can be saved                                                                                                Works
+During operations the App is stable                                                                   Works
+Before the App is deemed complete, any new features that are added will be tested. 
+
+Development Lifecycle:
+Dev--------Test-------Stage-------Production
+The source code has been committed to Github for version Control and Final Assessment.
+Past Version of Development:
+-Interface Created
+-Original Incident report App was created
+-Functionality of the core incident report was implemented.
+-App Tested on Android Device
+Present Version Tested:
+-Test Environment had working code added
+-Functions of the core App are tested and reviewed
+-App Behaviors and errors are assessed
+-Test Stage Version is updated with Github Repository.
+Finalized Version:
+-Remaining issues will be modified
+-Final APK will be Generated
+-Last functioning testing will be finalized
+-Approved App to Production will be Promoted.
+Stiles, J. (2026, February 1). Mobile app testing: Test types, best practices, and tools. TestRail. https://www.testrail.com/blog/mobile-app-testing/
+GitHub. (2025, January 24). What is the SDLC? Software development lifecycle explained. https://github.com/resources/articles/what-is-sdlc
+Featurebase. (2026). What is a changelog? Definition, format & examples. https://www.featurebase.app/blog/what-is-a-changelog
+
+
+
+
+
+
 
 
 
