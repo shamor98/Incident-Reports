@@ -2,7 +2,9 @@ package com.example.incidentreportapp;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,14 +15,17 @@ import org.json.JSONObject;
 public class ViewReportsActivity extends AppCompatActivity {
 
     private TextView textReports;
-
+    private Button buttonEditReport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_reports);
 
         textReports = findViewById(R.id.textReports);
-
+        buttonEditReport = findViewById(R.id.buttonEditReport);
+        buttonEditReport.setOnClickListener(v -> {
+            Toast.makeText(this, "Edit Report clicked", Toast.LENGTH_SHORT).show();
+        });
         displayReports();
     }
 

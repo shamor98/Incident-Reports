@@ -27,7 +27,13 @@
             android:text="No incident reports have been saved."
             android:textSize="17sp"
             android:lineSpacingExtra="4dp" />
-
+        <Button
+            android:id="@+id/buttonEditReport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit Report"
+            android:layout_marginTop="20dp" />
     </LinearLayout>
+
 
 </ScrollView>
