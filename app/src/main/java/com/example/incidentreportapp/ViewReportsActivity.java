@@ -16,6 +16,7 @@ public class ViewReportsActivity extends AppCompatActivity {
 
     private TextView textReports;
     private Button buttonEditReport;
+    private Button buttonDeleteReport;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,10 +24,46 @@ public class ViewReportsActivity extends AppCompatActivity {
 
         textReports = findViewById(R.id.textReports);
         buttonEditReport = findViewById(R.id.buttonEditReport);
+        buttonDeleteReport = findViewById(R.id.buttonDeleteReport);
         buttonEditReport.setOnClickListener(v -> {
             Toast.makeText(this, "Edit Report clicked", Toast.LENGTH_SHORT).show();
         });
         displayReports();
+        buttonDeleteReport.setOnClickListener(v -> {
+            SharedPreferences preferences =
+                    getSharedPreferences("IncidentReports", MODE_PRIVATE);
+
+            String savedReports =
+                    preferences.getString("reports", "[]");
+
+            try {
+                JSONArray reportsArray = new JSONArray(savedReports);
+
+                if (reportsArray.length() > 0) {
+                    reportsArray.remove(reportsArray.length() - 1);
+
+                    preferences.edit()
+                            .putString("reports", reportsArray.toString())
+                            .apply();
+
+                    Toast.makeText(this,
+                            "Last report deleted",
+                            Toast.LENGTH_SHORT).show();
+
+                    displayReports();
+
+                } else {
+                    Toast.makeText(this,
+                            "No reports to delete",
+                            Toast.LENGTH_SHORT).show();
+                }
+
+            } catch (JSONException e) {
+                Toast.makeText(this,
+                        "Unable to delete report",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void displayReports() {
