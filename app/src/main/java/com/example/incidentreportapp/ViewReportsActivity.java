@@ -3,6 +3,7 @@ package com.example.incidentreportapp;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,8 @@ public class ViewReportsActivity extends AppCompatActivity {
     private TextView textReports;
     private Button buttonEditReport;
     private Button buttonDeleteReport;
+    private EditText editTextSearch;
+    private Button buttonSearchReports;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,8 +28,19 @@ public class ViewReportsActivity extends AppCompatActivity {
         textReports = findViewById(R.id.textReports);
         buttonEditReport = findViewById(R.id.buttonEditReport);
         buttonDeleteReport = findViewById(R.id.buttonDeleteReport);
+        editTextSearch = findViewById(R.id.editTextSearch);
+        buttonSearchReports = findViewById(R.id.buttonSearchReports);
         buttonEditReport.setOnClickListener(v -> {
             Toast.makeText(this, "Edit Report clicked", Toast.LENGTH_SHORT).show();
+        });
+        buttonSearchReports.setOnClickListener(v -> {
+            String searchText = editTextSearch.getText().toString().trim();
+
+            if (searchText.isEmpty()) {
+                displayReports();
+            } else {
+                searchReports(searchText);
+            }
         });
         displayReports();
         buttonDeleteReport.setOnClickListener(v -> {
@@ -133,6 +147,42 @@ public class ViewReportsActivity extends AppCompatActivity {
         } catch (JSONException e) {
 
             textReports.setText("Unable to display reports.");
+        }
+    }
+    private void searchReports(String searchText) {
+        SharedPreferences preferences =
+                getSharedPreferences("IncidentReports", MODE_PRIVATE);
+
+        String savedReports =
+                preferences.getString("reports", "[]");
+
+        try {
+            JSONArray reportsArray = new JSONArray(savedReports);
+            StringBuilder builder = new StringBuilder();
+
+            for (int i = 0; i < reportsArray.length(); i++) {
+                JSONObject report = reportsArray.getJSONObject(i);
+
+                String reportText = report.toString().toLowerCase();
+
+                if (reportText.contains(searchText.toLowerCase())) {
+                    builder.append("Report ")
+                            .append(i + 1)
+                            .append("\n");
+
+                    builder.append(report.toString())
+                            .append("\n\n");
+                }
+            }
+
+            if (builder.length() == 0) {
+                textReports.setText("No matching reports found.");
+            } else {
+                textReports.setText(builder.toString());
+            }
+
+        } catch (JSONException e) {
+            textReports.setText("Unable to search reports.");
         }
     }
 }
