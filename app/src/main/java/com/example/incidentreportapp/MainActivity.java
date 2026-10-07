@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import android.widget.Spinner;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     EditText editDescription;
     EditText editReporter;
     EditText editActionTaken;
-
+    Spinner spinnerCategory;
     Button btnSave;
     Button btnViewReports;
 
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         editDescription = findViewById(R.id.editDescription);
         editReporter = findViewById(R.id.editReporter);
         editActionTaken = findViewById(R.id.editActionTaken);
-
+        spinnerCategory = findViewById(R.id.spinnerCategory);
         btnSave = findViewById(R.id.btnSave);
         btnViewReports = findViewById(R.id.btnViewReports);
 
@@ -59,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         String date = editDate.getText().toString().trim();
         String time = editTime.getText().toString().trim();
         String location = editLocation.getText().toString().trim();
+        String category = spinnerCategory.getSelectedItem().toString();
         String description = editDescription.getText().toString().trim();
         String reporter = editReporter.getText().toString().trim();
         String actionTaken = editActionTaken.getText().toString().trim();
@@ -102,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
             report.put("date", date);
             report.put("time", time);
             report.put("location", location);
+            report.put("category", category);
             report.put("description", description);
             report.put("reporter", reporter);
             report.put("actionTaken", actionTaken);
@@ -139,5 +142,6 @@ public class MainActivity extends AppCompatActivity {
         editDescription.setText("");
         editReporter.setText("");
         editActionTaken.setText("");
+        spinnerCategory.setSelection(0);
     }
 }

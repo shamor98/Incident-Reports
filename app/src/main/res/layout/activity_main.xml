@@ -45,7 +45,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Location" />
-
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:entries="@array/report_categories" />
         <EditText
             android:id="@+id/editDescription"
             android:layout_width="match_parent"

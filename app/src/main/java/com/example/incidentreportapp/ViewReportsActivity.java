@@ -122,7 +122,9 @@ public class ViewReportsActivity extends AppCompatActivity {
                 builder.append("Location: ")
                         .append(report.getString("location"))
                         .append("\n\n");
-
+                builder.append("Category: ")
+                        .append(report.optString("category", "Not specified"))
+                        .append("\n\n");
                 builder.append("Individuals Involved:\n")
                         .append(report.getString("individuals"))
                         .append("\n\n");

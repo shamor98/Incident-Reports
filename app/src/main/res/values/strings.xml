@@ -1,3 +1,14 @@
 <resources>
+    <string-array name="report_categories">
+        <item>Select Category</item>
+        <item>Assault</item>
+        <item>Fight</item>
+        <item>Medical</item>
+        <item>Contraband</item>
+        <item>Rule Violation</item>
+        <item>Threat</item>
+        <item>Property Damage</item>
+        <item>Other</item>
+    </string-array>
     <string name="app_name">IncidentReportApp</string>
 </resources>
